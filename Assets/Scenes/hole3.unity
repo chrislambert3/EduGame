@@ -267,6 +267,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextLevScreen: {fileID: 0}
   GameUI: {fileID: 0}
+  TextInput: {fileID: 0}
+  Slider: {fileID: 0}
 --- !u!1 &348291778
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextLevScreen: {fileID: 874924498}
   GameUI: {fileID: 1460715784}
+  TextInput: {fileID: 1982237502}
+  Slider: {fileID: 2003674488}
 --- !u!1 &443124038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6524,7 +6528,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 348291783}
+        m_TargetAssemblyTypeName: UserInterface, Assembly-CSharp
+        m_MethodName: SetTextBox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

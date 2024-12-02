@@ -210,6 +210,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1084,7 +1097,46 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      golfsheet01_0: -8104238910646864951
+      golfsheet01_1: 5931955477641000850
+      golfsheet01_10: 4111883395825851255
+      golfsheet01_11: 5528453756542335239
+      golfsheet01_12: -4643000275495331414
+      golfsheet01_13: -5120029256616012529
+      golfsheet01_14: 1703076064947020344
+      golfsheet01_15: -2799480632462176743
+      golfsheet01_16: 4784788442514692679
+      golfsheet01_17: 1944127090418498638
+      golfsheet01_18: 2545862678537233432
+      golfsheet01_19: -4131579236142428375
+      golfsheet01_2: -5402617118920358355
+      golfsheet01_20: -5658119059788759282
+      golfsheet01_21: 2569941066740110803
+      golfsheet01_22: -3543553788374981442
+      golfsheet01_23: 539081492004812832
+      golfsheet01_24: 7508386430879117919
+      golfsheet01_25: -7850038633017297982
+      golfsheet01_26: -1937537307358814181
+      golfsheet01_27: 6073165539860037448
+      golfsheet01_28: -8063817221978972952
+      golfsheet01_29: -2497959213765682817
+      golfsheet01_3: -424198554342166381
+      golfsheet01_30: -5211601988335368255
+      golfsheet01_31: 8496098713144851372
+      golfsheet01_32: -1708074358652599309
+      golfsheet01_33: -496594796166363427
+      golfsheet01_34: -7132616525306949428
+      golfsheet01_35: -4905863196154058933
+      golfsheet01_36: -2753562438543138410
+      golfsheet01_37: -2992404898476584353
+      golfsheet01_38: -1876175854104548236
+      golfsheet01_4: -6619572636827296590
+      golfsheet01_5: -4520342549297711498
+      golfsheet01_6: 8282213590605006470
+      golfsheet01_7: 1864234696302330598
+      golfsheet01_8: 432854043000354943
+      golfsheet01_9: -712689516841227254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
