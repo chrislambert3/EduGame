@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 480493125}
   - component: {fileID: 480493127}
   - component: {fileID: 480493126}
+  - component: {fileID: 480493128}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -2757,6 +2758,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &480493128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 480493124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78766765726df964c9e3fe81b1a23aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberPrefab: {fileID: 8624556067195365935, guid: 75ff8c4d676f079478473acd31c73e83, type: 3}
 --- !u!1 &487148337
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,7 +5182,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -473187921
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
