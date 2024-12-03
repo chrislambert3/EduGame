@@ -27,17 +27,17 @@ public class GridGenerator : MonoBehaviour
     }
     void CreateParent()
     {
-        parent = new GameObject("GridOverlay");
-        if (parent == null)
+        this.parent = new GameObject("GridOverlay");
+        if (this.parent == null)
         {
-            parent = new GameObject("GridOverlay");
+            this.parent = new GameObject("GridOverlay");
         }
     }
 
     void DrawLine(Vector3 start, Vector3 dir)
     {
         GameObject line = new GameObject("GridLine");
-        line.transform.SetParent(parent.transform);
+        line.transform.SetParent(this.parent.transform);
         LineRenderer lineRenderer = line.AddComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(0, start);
@@ -52,7 +52,7 @@ public class GridGenerator : MonoBehaviour
 
     void DrawNumber(Vector3 position, int x, int y)
     {
-        GameObject numberObject = Instantiate(numberPrefab, position, Quaternion.identity, parent.transform);
+        GameObject numberObject = Instantiate(numberPrefab, position, Quaternion.identity, this.parent.transform);
 
         // Handle displaying above Tilemap, but below UI
         Renderer renderer = numberObject.GetComponent<Renderer>();
