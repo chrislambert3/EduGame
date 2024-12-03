@@ -8,24 +8,28 @@ public class EquationGenerator : MonoBehaviour
     private LinearEquation linearEquation;
     private bool shouldUpdate = false;
 
-    private GameObject numberPrefab; // delete this line
-    private Renderer renderer;
+    // Below is for displaying the equation above the ball when it is stationary.
+    // This can be removed later.
+    private GameObject numberPrefab;
+    private Renderer equationRenderer;
     private TextMesh textMesh;
 
 
     // Set initial equation on creation
     void Start()
     {
+        // Set initial equation
         UpdateEquation();
 
-        // delete below
+        // Below is for displaying the equation above the ball when it is stationary.
+        // This can be removed later.
         this.numberPrefab = Resources.Load<GameObject>("Prefabs/NumberPrefab");
         GameObject numberObject = Instantiate(numberPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        this.renderer = numberObject.GetComponent<Renderer>();
-        if (this.renderer != null)
+        this.equationRenderer = numberObject.GetComponent<Renderer>();
+        if (this.equationRenderer != null)
         {
-            this.renderer.sortingLayerName = "Grid Numbers";
-            this.renderer.sortingOrder = 1;
+            this.equationRenderer.sortingLayerName = "Grid Numbers";
+            this.equationRenderer.sortingOrder = 1;
         }
 
         this.textMesh = numberObject.GetComponent<TextMesh>();
@@ -44,7 +48,10 @@ public class EquationGenerator : MonoBehaviour
             this.shouldUpdate) {
             this.shouldUpdate = false;
             UpdateEquation();
-            this.renderer.transform.position = new Vector3(ball.position.x, ball.position.y + 1, 0);
+
+            // Below is for displaying the equation above the ball when it is stationary.
+            // This can be removed later.
+            this.equationRenderer.transform.position = new Vector3(ball.position.x, ball.position.y + 1, 0);
             this.textMesh.text = $"({linearEquation.getSlopeInterceptString()})";
         }
         // If the ball is moving and the equation is not up to date, set the flag to update the equation.

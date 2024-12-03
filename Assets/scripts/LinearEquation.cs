@@ -1,14 +1,13 @@
 ﻿using System;
 public class LinearEquation
 {
-    // distance from ball to goal
+    // Distance from ball to goal
     float distance;
 
-    // internal storage of the equation in y=mx+b form
+    // Equation stored internally in slope-intercept form (y=mx+b)
     float m;
     float b;
 
-    // constructor
     public LinearEquation(float x1, float y1, float x2, float y2)
     {
         this.m = (y2 - y1) / (x2 - x1);
@@ -22,6 +21,7 @@ public class LinearEquation
                                 Math.Pow(y2 - y1, 2));
     }
 
+    // All string formatters are rounded to 2 decimal places for display purposes
     public string getSlopeInterceptString()
     {
         return "y = " + Math.Round(this.m, 2) + "x + " + Math.Round(this.b, 2);
