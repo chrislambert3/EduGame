@@ -8,8 +8,8 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float FollowSpeed = 2f;
 
     [Header("Camera Boundaries")]
-    [SerializeField] private float minX = -7.12f; // Left boundary
-    [SerializeField] private float maxX = 7.12f; // Right boundary
+    [SerializeField] private float minX = -6.4f; // Left boundary
+    [SerializeField] private float maxX = 6.4f; // Right boundary
 
     void Update()
     {
