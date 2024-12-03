@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -10,21 +9,21 @@ public class GridGenerator : MonoBehaviour
     private Tilemap tilemap;                                    // This script is currently attached to the relevant tilemap
     private float lineThickness = 0.025f;                       // Thickness of the grid lines
     private Color lineColor = new Color32(255, 226, 0, 127);    // Color of the grid lines, edit here please.
-    private Color numberColor = new Color32(255, 226, 0, 127);  // Color of the grid numbers, edit here please.
+    //private Color numberColor = new Color32(255, 226, 0, 127);  // Color of the grid numbers, edit here please.
+    private Color numberColor = Color.black;  // Color of the grid numbers, edit here please.
+    private CoordinateMapper coordinateMapper;                  // Used to convert between world coordinates and grid coordinates
 
     void Start()
     {
         this.tilemap = this.GetComponentInChildren<Tilemap>();
         this.numberPrefab = Resources.Load<GameObject>("Prefabs/NumberPrefab");
+        this.coordinateMapper = new CoordinateMapper(this.tilemap);
         CreateParent();
         DrawGrid();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // Not used
-    }
+    // Not used
+    // void Update() { }
     void CreateParent()
     {
         this.parent = new GameObject("GridOverlay");
@@ -74,20 +73,28 @@ public class GridGenerator : MonoBehaviour
     {
         // Figure out the size of each "tile" in the tilemap
         BoundsInt cellBounds = tilemap.cellBounds;
-        Vector3 cellSize = tilemap.cellSize;
+        Vector3 cellSize = tilemap.cellSize;        
 
         // Draw a grid of lines at each cell position,
         for (int x = cellBounds.xMin; x <= cellBounds.xMax; x++) {
             for (int y = cellBounds.yMin; y <= cellBounds.yMax; y++) { 
                 Vector3 worldPos = tilemap.CellToWorld(new Vector3Int(x, y, 0));
-
+                Vector3 coord = coordinateMapper.worldPosToCoordinates(worldPos);
+                
                 DrawLine(worldPos, new Vector3(cellSize.x, 0, 0));
                 DrawLine(worldPos, new Vector3(0, cellSize.y, 0));
 
                 // label the grid with numbers if x or y is 0
-                if (x == 0 || y == 0)
+                const float labelOffset = -0.33f;
+                if (coord.x == 0 && coord.y == 0)
                 {
-                    DrawNumber(worldPos + new Vector3(0, 0, -0.1f), x, y);
+                    DrawNumber(worldPos+ new Vector3(labelOffset, labelOffset, -0.1f), (int)coord.x, (int)coord.y);
+                } else if (coord.x == 0)
+                {
+                    DrawNumber(worldPos + new Vector3(labelOffset, 0, -0.1f), (int)coord.x, (int)coord.y);
+                } else if (coord.y == 0)
+                {
+                    DrawNumber(worldPos + new Vector3(0, labelOffset, -0.1f), (int)coord.x, (int)coord.y);
                 }
             }
         }
