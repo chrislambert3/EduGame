@@ -3283,6 +3283,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetTextBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_margin.x
+      value: -0.000061035156
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1647023491194656805, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3379,6 +3387,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6597488398069417643, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 419.9818
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597488398069417643, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.990906
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3398,6 +3414,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &705122042 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+  m_PrefabInstance: {fileID: 705122039}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &713447690
@@ -6046,7 +6073,7 @@ MonoBehaviour:
   NextLevScreen: {fileID: 1065676076}
   GameUI: {fileID: 1040287518}
   ShotCountText: {fileID: 1897126433}
-  PowerTextBox: {fileID: 1954350546}
+  PowerText: {fileID: 705122042}
   Slider: {fileID: 705122041}
   CurrentShotCount: 0
   CurrentPower: 2

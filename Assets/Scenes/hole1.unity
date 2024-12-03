@@ -6599,7 +6599,7 @@ MonoBehaviour:
   NextLevScreen: {fileID: 373797762}
   GameUI: {fileID: 323641275}
   ShotCountText: {fileID: 455219684}
-  PowerTextBox: {fileID: 290563040}
+  PowerText: {fileID: 6198324205885138974}
   Slider: {fileID: 1080681917}
   CurrentShotCount: 0
   CurrentPower: 2
@@ -8784,6 +8784,10 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 843046299}
+    - target: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1647023491194656805, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -8880,11 +8884,30 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6597488398069417643, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 419.9819
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597488398069417643, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 9.991
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+--- !u!114 &6198324205885138974 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+  m_PrefabInstance: {fileID: 6198324205885138973}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6464375308670479454 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3176854212609879700, guid: 9433cfea3a417a44a990f656e0ef99b3, type: 3}

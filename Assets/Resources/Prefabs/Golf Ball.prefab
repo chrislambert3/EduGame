@@ -283,6 +283,5 @@ MonoBehaviour:
   body: {fileID: 0}
   line: {fileID: 0}
   maxPower: 20
-  power: 2
   maxGoalSpeed: 4
   user: {fileID: 0}

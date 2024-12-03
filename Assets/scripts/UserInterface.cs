@@ -8,7 +8,7 @@ public class UserInterface : MonoBehaviour
     public GameObject NextLevScreen;
     public GameObject GameUI;
     public TextMeshProUGUI ShotCountText;
-    public TMP_InputField PowerTextBox;
+    public TMP_Text PowerText;
     public Slider Slider;
     public int CurrentShotCount = 0;
     public float CurrentPower = 2f; // Need a Default power set so the line will show
@@ -42,7 +42,7 @@ public class UserInterface : MonoBehaviour
     // gets call onValueChange of power slider
     public void SetTextBox()
     {   // update the current power to the variable and on screen
-        PowerTextBox.text = Slider.value.ToString("F2");
+        PowerText.text = "POWER SLIDER: " + Slider.value.ToString("F2");
         CurrentPower = float.Parse(Slider.value.ToString("F2"));
         // if the line set to active redraw the line as you change up the power
         if (GolfBallLine.positionCount == 2)

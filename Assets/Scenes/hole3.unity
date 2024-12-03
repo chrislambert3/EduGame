@@ -268,7 +268,7 @@ MonoBehaviour:
   NextLevScreen: {fileID: 0}
   GameUI: {fileID: 0}
   ShotCountText: {fileID: 0}
-  PowerTextBox: {fileID: 0}
+  PowerText: {fileID: 0}
   Slider: {fileID: 0}
   CurrentShotCount: 0
   CurrentPower: 2
@@ -526,7 +526,7 @@ MonoBehaviour:
   NextLevScreen: {fileID: 874924498}
   GameUI: {fileID: 1460715784}
   ShotCountText: {fileID: 1106944944}
-  PowerTextBox: {fileID: 1823736230}
+  PowerText: {fileID: 1071102067}
   Slider: {fileID: 1064747954}
   CurrentShotCount: 0
   CurrentPower: 2
@@ -5386,9 +5386,9 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 348291783}
-    - target: {fileID: 1077225447600254192, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTextBox
+    - target: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1647023491194656805, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
       propertyPath: m_Pivot.x
@@ -5486,6 +5486,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6597488398069417643, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 420.4528
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597488398069417643, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.2264
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5507,6 +5515,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1647023491194656805, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
   m_PrefabInstance: {fileID: 1064747953}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1071102067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1289481137275183562, guid: 94185d48449fa6d42aea41a98b84d490, type: 3}
+  m_PrefabInstance: {fileID: 1064747953}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1086217490
 GameObject:
   m_ObjectHideFlags: 0
