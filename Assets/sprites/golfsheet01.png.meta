@@ -1110,6 +1110,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: golfsheet01_39
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77b4ee3381a608247a8dcbcd8d92fb6c
+      internalID: 255461832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1157,6 +1179,7 @@ TextureImporter:
       golfsheet01_36: -2753562438543138410
       golfsheet01_37: -2992404898476584353
       golfsheet01_38: -1876175854104548236
+      golfsheet01_39: 255461832
       golfsheet01_4: -6619572636827296590
       golfsheet01_5: -4520342549297711498
       golfsheet01_6: 8282213590605006470
