@@ -13,6 +13,7 @@ public class Ball : MonoBehaviour
     //[SerializeField] private float power = 2f;    /// I may call GetPower() directly into the parameter
     [SerializeField] private float maxGoalSpeed = 4f;
     [SerializeField] private UserInterface user;
+    [SerializeField] private AudioSource goalSound;
 
     private bool isDragging;
     private bool inHole;
@@ -25,6 +26,8 @@ public class Ball : MonoBehaviour
         user = GameObject.Find("Canvas").GetComponent<UserInterface>();
         body = GetComponent<Rigidbody2D>();
         line = GetComponent<LineRenderer>();
+        goalSound = GameObject.Find("Victory Sound").GetComponent<AudioSource>();
+        goalSound.time = 0.35f;
     }
     private void Update()
     {
@@ -108,6 +111,7 @@ public class Ball : MonoBehaviour
         {
             inHole = true;
             body.linearVelocity = Vector2.zero;
+            goalSound.Play();
             gameObject.SetActive(false);
             // Level complete function goes here
             user.ActivateLevelFinish();
