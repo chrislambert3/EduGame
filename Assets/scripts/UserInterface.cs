@@ -51,7 +51,7 @@ public class UserInterface : MonoBehaviour
         }
 
     }
-
+    //increments shot count for shot counter
     public void IncrementShotCount()
     {
         CurrentShotCount++;
