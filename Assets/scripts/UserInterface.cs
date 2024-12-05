@@ -56,7 +56,7 @@ public class UserInterface : MonoBehaviour
     {
         CurrentShotCount++;
         ShotCountText.text = "Shot Count: " + CurrentShotCount.ToString();
-        Debug.Log($"IncrementShotCount called, shot is now{CurrentShotCount}");
+        //Debug.Log($"IncrementShotCount called, shot is now{CurrentShotCount}");
     }
 
     public float GetPower()

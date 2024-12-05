@@ -14,6 +14,7 @@ public class Ball : MonoBehaviour
     [SerializeField] private float maxGoalSpeed = 4f;
     [SerializeField] private UserInterface user;
     [SerializeField] private AudioSource goalSound;
+    [SerializeField] private AudioSource wallSound;
 
     private bool isDragging;
     private bool inHole;
@@ -27,7 +28,7 @@ public class Ball : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         line = GetComponent<LineRenderer>();
         goalSound = GameObject.Find("Victory Sound").GetComponent<AudioSource>();
-        goalSound.time = 0.35f;
+        wallSound = GameObject.Find("Wall Sound").GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -96,7 +97,6 @@ public class Ball : MonoBehaviour
     {
         // if the ball is still rolling, or the ball trajectory is cleared, dont shoot
         if (!isReady() || BallDirection == Vector2.zero) return false;
-        Debug.Log("Ball Direction before shooting: " + BallDirection);
         // shoot the ball, hide the trajectory line, erase the ball trajectory (so it the user needs to specify the shot)
         body.linearVelocity = Vector2.ClampMagnitude(BallDirection * user.GetPower(), maxPower);
         line.positionCount = 0;
@@ -111,6 +111,7 @@ public class Ball : MonoBehaviour
         {
             inHole = true;
             body.linearVelocity = Vector2.zero;
+            goalSound.time = 0.35f; // short silence at the start so i skipped it
             goalSound.Play();
             gameObject.SetActive(false);
             // Level complete function goes here
@@ -127,6 +128,13 @@ public class Ball : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Goal") CheckWinState();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Wall") {
+            wallSound.time = 0.2f;
+            wallSound.Play(); 
+        }
     }
 
 }
