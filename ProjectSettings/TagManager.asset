@@ -7,6 +7,7 @@ TagManager:
   - NextLevScreen
   - GameUI
   - Goal
+  - Wall
   layers:
   - Default
   - TransparentFX

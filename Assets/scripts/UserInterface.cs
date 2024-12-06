@@ -51,12 +51,12 @@ public class UserInterface : MonoBehaviour
         }
 
     }
-
+    //increments shot count for shot counter
     public void IncrementShotCount()
     {
         CurrentShotCount++;
         ShotCountText.text = "Shot Count: " + CurrentShotCount.ToString();
-        Debug.Log($"IncrementShotCount called, shot is now{CurrentShotCount}");
+        //Debug.Log($"IncrementShotCount called, shot is now{CurrentShotCount}");
     }
 
     public float GetPower()

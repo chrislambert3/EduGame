@@ -285,3 +285,4 @@ MonoBehaviour:
   maxPower: 20
   maxGoalSpeed: 4
   user: {fileID: 0}
+  goalSound: {fileID: 0}
