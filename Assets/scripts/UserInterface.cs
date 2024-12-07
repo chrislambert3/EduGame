@@ -11,7 +11,7 @@ public class UserInterface : MonoBehaviour
     public TMP_Text PowerText;
     public Slider Slider;
     public int CurrentShotCount = 0;
-    public float CurrentPower = 2f; // Need a Default power set so the line will show
+    public float CurrentPower = 0f; // Need a Default power set so the line will show
     public LineRenderer GolfBallLine;
     public Ball GolfBall;
 

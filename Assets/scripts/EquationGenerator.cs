@@ -18,6 +18,8 @@ public class EquationGenerator : MonoBehaviour
     // Set initial equation on creation
     void Start()
     {
+        ball = GameObject.Find("Golf Ball").GetComponent<Rigidbody2D>();
+        goal = GameObject.Find("Goal").GetComponent<Rigidbody2D>();
         // Set initial equation
         UpdateEquation();
 
@@ -38,6 +40,8 @@ public class EquationGenerator : MonoBehaviour
             this.textMesh.text = "";
             this.textMesh.color = Color.white;
         }
+
+        Debug.Log($"Equation: {linearEquation.getSlopeInterceptString()}");
     }
 
     // Maintain the equation

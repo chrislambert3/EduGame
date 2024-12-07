@@ -39,6 +39,10 @@ public class Ball : MonoBehaviour
     {
         return body.linearVelocity.magnitude <= 0.2f;
     }
+    public void setDirection(Vector2 direction)
+    {
+        BallDirection = direction;
+    }
 
     private void PlayerInput()
     {   // if the ball is still rolling, return to ignore
