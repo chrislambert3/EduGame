@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7415959803344461340}
-  - component: {fileID: 6534898192380920718}
+  - component: {fileID: 5448403745397635357}
   m_Layer: 0
   m_Name: Wall Sound
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6534898192380920718
+--- !u!82 &5448403745397635357
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
