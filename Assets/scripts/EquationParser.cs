@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using TMPro;
-using TMPro.Examples;
 
 public class EquationParser : MonoBehaviour
 {
@@ -21,7 +20,7 @@ public class EquationParser : MonoBehaviour
         {
             inputField = GameObject.Find("Input").GetComponent<TMP_InputField>();
         }
-        inputField.onEndEdit.AddListener(parseEquation);
+        inputField.onValueChanged.AddListener(parseEquation);
 
     }
 

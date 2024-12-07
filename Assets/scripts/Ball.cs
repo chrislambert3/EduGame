@@ -42,11 +42,13 @@ public class Ball : MonoBehaviour
     public void setDirection(Vector2 direction)
     {
         BallDirection = direction;
+        LineDirection = direction;
     }
 
     private void PlayerInput()
     {   // if the ball is still rolling, return to ignore
         if (!isReady()) return;
+        user.UpdatePrompt();
         // gets mouse position from screen to "game world"
         Vector2 inputPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
@@ -104,7 +106,7 @@ public class Ball : MonoBehaviour
         // shoot the ball, hide the trajectory line, erase the ball trajectory (so it the user needs to specify the shot)
         body.linearVelocity = Vector2.ClampMagnitude(BallDirection * user.GetPower(), maxPower);
         line.positionCount = 0;
-        BallDirection = Vector2.zero; // clear the ball trajectory vector ( so user wont press shoot again with the previous trajectory, forcing them to enter another of they shoot) 
+        //BallDirection = Vector2.zero; // clear the ball trajectory vector ( so user wont press shoot again with the previous trajectory, forcing them to enter another of they shoot) 
         return true;
     }
     private void CheckWinState()
@@ -117,7 +119,7 @@ public class Ball : MonoBehaviour
             body.linearVelocity = Vector2.zero;
             goalSound.time = 0.35f; // short silence at the start so i skipped it
             goalSound.Play();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             // Level complete function goes here
             user.ActivateLevelFinish();
         }

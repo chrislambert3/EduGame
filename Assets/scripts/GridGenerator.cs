@@ -9,8 +9,7 @@ public class GridGenerator : MonoBehaviour
     private Tilemap tilemap;                                    // This script is currently attached to the relevant tilemap
     private float lineThickness = 0.025f;                       // Thickness of the grid lines
     private Color lineColor = new Color32(255, 226, 0, 127);    // Color of the grid lines, edit here please.
-    //private Color numberColor = new Color32(255, 226, 0, 127);  // Color of the grid numbers, edit here please.
-    private Color numberColor = Color.black;  // Color of the grid numbers, edit here please.
+    private Color numberColor = Color.black;                    // Color of the grid numbers, edit here please.
     private CoordinateMapper coordinateMapper;                  // Used to convert between world coordinates and grid coordinates
 
     void Start()
@@ -91,10 +90,10 @@ public class GridGenerator : MonoBehaviour
                     DrawNumber(worldPos+ new Vector3(labelOffset, labelOffset, -0.1f), (int)coord.x, (int)coord.y);
                 } else if (coord.x == 0)
                 {
-                    DrawNumber(worldPos + new Vector3(labelOffset, 0, -0.1f), (int)coord.x, (int)coord.y);
+                    //DrawNumber(worldPos + new Vector3(labelOffset, 0, -0.1f), (int)coord.x, (int)coord.y);
                 } else if (coord.y == 0)
                 {
-                    DrawNumber(worldPos + new Vector3(0, labelOffset, -0.1f), (int)coord.x, (int)coord.y);
+                    //DrawNumber(worldPos + new Vector3(0, labelOffset, -0.1f), (int)coord.x, (int)coord.y);
                 }
             }
         }
