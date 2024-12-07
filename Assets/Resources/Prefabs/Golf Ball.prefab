@@ -286,3 +286,4 @@ MonoBehaviour:
   maxGoalSpeed: 4
   user: {fileID: 0}
   goalSound: {fileID: 0}
+  wallSound: {fileID: 0}
