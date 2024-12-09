@@ -8,36 +8,15 @@ public class EquationGenerator : MonoBehaviour
     private LinearEquation linearEquation;
     private bool shouldUpdate = false;
 
-    // Below is for displaying the equation above the ball when it is stationary.
-    // This can be removed later.
-    private GameObject numberPrefab;
-    private Renderer equationRenderer;
-    private TextMesh textMesh;
-
-
     // Set initial equation on creation
     void Start()
     {
+        ball = GameObject.Find("Golf Ball").GetComponent<Rigidbody2D>();
+        goal = GameObject.Find("Goal").GetComponent<Rigidbody2D>();
         // Set initial equation
         UpdateEquation();
 
-        // Below is for displaying the equation above the ball when it is stationary.
-        // This can be removed later.
-        this.numberPrefab = Resources.Load<GameObject>("Prefabs/NumberPrefab");
-        GameObject numberObject = Instantiate(numberPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        this.equationRenderer = numberObject.GetComponent<Renderer>();
-        if (this.equationRenderer != null)
-        {
-            this.equationRenderer.sortingLayerName = "Grid Numbers";
-            this.equationRenderer.sortingOrder = 1;
-        }
-
-        this.textMesh = numberObject.GetComponent<TextMesh>();
-        if (textMesh != null)
-        {
-            this.textMesh.text = "";
-            this.textMesh.color = Color.white;
-        }
+        Debug.Log($"Equation: {linearEquation.getSlopeInterceptString()}");
     }
 
     // Maintain the equation
@@ -49,10 +28,6 @@ public class EquationGenerator : MonoBehaviour
             this.shouldUpdate = false;
             UpdateEquation();
 
-            // Below is for displaying the equation above the ball when it is stationary.
-            // This can be removed later.
-            this.equationRenderer.transform.position = new Vector3(ball.position.x, ball.position.y + 1, 0);
-            this.textMesh.text = $"({linearEquation.getSlopeInterceptString()})";
         }
         // If the ball is moving and the equation is not up to date, set the flag to update the equation.
         else if (ball.linearVelocity.magnitude != 0 &&

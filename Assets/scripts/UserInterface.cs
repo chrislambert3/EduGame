@@ -11,15 +11,27 @@ public class UserInterface : MonoBehaviour
     public TMP_Text PowerText;
     public Slider Slider;
     public int CurrentShotCount = 0;
-    public float CurrentPower = 2f; // Need a Default power set so the line will show
+    public float MaxPower = 20f;
+    public float CurrentPower = 0f; // Need a Default power set so the line will show
     public LineRenderer GolfBallLine;
     public Ball GolfBall;
+    private Question Question;
+    private TMP_Text Prompt;
 
 
     private void Start()
     {
-        GolfBallLine = GameObject.Find("Golf Ball").GetComponent<LineRenderer>();
         GolfBall = GameObject.Find("Golf Ball").GetComponent<Ball>();
+        GolfBallLine = GameObject.Find("Golf Ball").GetComponent<LineRenderer>();
+        Slider = GameObject.Find("Slider").GetComponent<Slider>();
+        
+        // configure slider max/min
+        Slider.maxValue = MaxPower;
+        Slider.minValue = -1 * MaxPower;
+
+        this.Question = new Question();
+        this.Prompt = GameObject.Find("Prompt").GetComponent<TMP_Text>();
+        UpdatePrompt();
     }
 
     public void GoToScene(string sceneName)
@@ -67,5 +79,12 @@ public class UserInterface : MonoBehaviour
     public void ShootGolfBall()
     {
         if (GolfBall.ShootBall()) { IncrementShotCount(); }
+    }
+
+    public void UpdatePrompt()
+    {
+        this.Prompt.text = this.Question.GetQuestion();
+        this.Prompt.fontStyle = FontStyles.Bold;
+        this.Prompt.fontSize = 24;
     }
 }
